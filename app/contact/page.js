@@ -3,7 +3,7 @@ import React from 'react'
 import Script from 'next/script'
 import { useState } from 'react'
 // import '/Contact.css'
-const page = () => {
+const Page = () => {
   const [fname, setfname] = useState("")
   const [lname, setlname] = useState("")
   const [password, setpassword] = useState("")
