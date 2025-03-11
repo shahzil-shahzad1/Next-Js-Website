@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head';
+import Image from "next/image"
 const page = () => {
   return (
     <div>
@@ -45,7 +46,7 @@ const page = () => {
               { name: 'Anime.js', img: 'https://codingtorque.com/wp-content/uploads/2024/03/image-30-1024x482.png' },
             ].map((tech, index) => (
               <div key={index} className="relative group bg-gray-50 p-4 border border-gray-200 rounded-lg shadow transform transition-transform duration-300 ease-out hover:-translate-y-2 hover:shadow-lg cursor-pointer">
-                <img src={tech.img} alt={tech.name} className="w-20 h-20 mx-auto rounded-lg" />
+                <Image src={tech.img} alt={tech.name} className="w-20 h-20 mx-auto rounded-lg"/>
                 <h4 className="text-lg font-medium text-gray-800 mt-2">{tech.name}</h4>
                 <p className="text-gray-600 text-sm">Brief description of {tech.name}.</p>
               </div>
@@ -64,7 +65,7 @@ const page = () => {
               { name: 'Next.js', img: 'https://static-00.iconduck.com/assets.00/nextjs-icon-1024x1024-5et230l7.png' },
             ].map((tech, index) => (
               <div key={index} className="relative group bg-gray-50 p-4 border border-gray-200 rounded-lg shadow transform transition-transform duration-300 ease-out hover:-translate-y-2 hover:shadow-lg cursor-pointer">
-                <img src={tech.img} alt={tech.name} className="w-20 h-20 mx-auto rounded-lg" />
+                <Image src={tech.img} alt={tech.name} className="w-20 h-20 mx-auto rounded-lg" />
                 <h4 className="text-lg font-medium text-gray-800 mt-2">{tech.name}</h4>
                 <p className="text-gray-600 text-sm">Brief description of {tech.name}.</p>
               </div>
@@ -93,7 +94,7 @@ const page = () => {
               { name: 'Pinterest', img: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png', link: '#' },
             ].map((social, index) => (
               <a key={index} href={social.link} target="_blank" rel="noopener noreferrer" className="text-center transform transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-lg">
-                <img src={social.img} alt={social.name} className="w-12 h-12 mx-auto" />
+                <Image src={social.img} alt={social.name} className="w-12 h-12 mx-auto" />
                 <p className="text-gray-600 text-sm mt-2">{social.name}</p>
               </a>
             ))}
