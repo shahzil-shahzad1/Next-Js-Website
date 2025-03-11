@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import anime from 'animejs';
 // import TypingAnimationSection from '@/Components/TypingAnimationSection';
 // import Typed from 'react-typed';
+import Image from "next/image";
 import { ReactTyped } from "react-typed";
   
 const skills = [
@@ -78,7 +79,7 @@ export default function Home(){
         <div className="w-full lg:w-1/2 flex justify-center items-center p-6">
             <div className="relative w-full max-w-sm h-64 lg:h-80">
               {skills.map((skill, index) => (
-                <img
+                <Image
                   key={index}
                   src={skill.image}
                   alt={skill.name}
@@ -119,7 +120,7 @@ export default function Home(){
               { name: "Shopping Store", img: "https://static.vecteezy.com/system/resources/previews/001/925/571/non_2x/online-shopping-store-on-website-and-mobile-phone-design-smart-business-marketing-concept-horizontal-view-illustration-vector.jpg" },
             ].map((project, index) => (
               <div key={index} className="bg-gray-50 p-8 rounded-lg shadow-lg transform transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-xl cursor-pointer">
-                <img src={project.img} alt={project.name} className="w-full h-40 object-cover rounded-t-lg" />
+                <Image src={project.img} alt={project.name} className="w-full h-40 object-cover rounded-t-lg" />
                 <h3 className="text-xl font-semibold text-gray-800 mt-2">{project.name}</h3>
               </div>
             ))}
